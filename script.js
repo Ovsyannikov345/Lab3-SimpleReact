@@ -31,6 +31,18 @@ const OrderTable = (props) => {
     );
 };
 
+OrderTable.propTypes = {
+  companyName: PropTypes.string.isRequired,
+  orders: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      address: PropTypes.string.isRequired,
+      task: PropTypes.string.isRequired,
+      photoUrl: PropTypes.string.isRequired
+    })
+  ).isRequired
+};
+
 const orders = [
     {
       id: 1,
